@@ -1,0 +1,14 @@
+<RCC>
+  <qresource prefix="bg">
+    <file>art-5852645.jpg</file>
+    <file>forest-5375005.jpg</file>
+    <file>headphones-3435888.jpg</file>
+    <file>music-408994.jpg</file>
+    <file>music-3888684_1920.png</file>
+    <file>musical-background-2886886.jpg</file>
+    <file>music-instruments-2887457.jpg</file>
+    <file>party-4638385.jpg</file>
+    <file>piano-3190092.jpg</file>
+    <file>vinyl-2592068.jpg</file>
+  </qresource>
+</RCC>
