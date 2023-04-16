@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>midiForm</class>
+ <widget class="QWidget" name="midiForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>512</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1024</width>
+    <height>512</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1024</width>
+    <height>512</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+	color: rgb(255, 52, 179);
+	color: #FFFFFF;
+	font-size: 25px;
+	font-weight: 900;
+	font-family: YouSheBiaoTiYuan;
+}
+QLabel,QRadioButton{
+	background-color: transparent;
+}
+QListWidget::item::selected:active
+{ 
+    background-color: rgba(255, 20, 147, 0.7);
+    border-width:0;
+}</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="bg_widget" native="true">
+     <property name="styleSheet">
+      <string notr="true">QWidget#bg_widget{
+	border-image:url(:/bg/cxk.png);
+}</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QWidget" name="widget_2" native="true">
+        <property name="styleSheet">
+         <string notr="true">#widget_2{
+	background-color: rgba(0, 178, 238, 0.5);
+}
+</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <property name="spacing">
+          <number>15</number>
+         </property>
+         <property name="leftMargin">
+          <number>18</number>
+         </property>
+         <property name="topMargin">
+          <number>18</number>
+         </property>
+         <property name="rightMargin">
+          <number>18</number>
+         </property>
+         <property name="bottomMargin">
+          <number>18</number>
+         </property>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_8">
+           <property name="spacing">
+            <number>15</number>
+           </property>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout">
+             <property name="leftMargin">
+              <number>5</number>
+             </property>
+             <property name="topMargin">
+              <number>5</number>
+             </property>
+             <property name="rightMargin">
+              <number>5</number>
+             </property>
+             <property name="bottomMargin">
+              <number>5</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="dir_label">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>midi预选目录，请选择要演奏的midi</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QListWidget" name="midiSelect_listWidget">
+               <property name="styleSheet">
+                <string notr="true">background-color: rgba(255, 255, 255, 0.5);
+</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_2">
+             <property name="spacing">
+              <number>10</number>
+             </property>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="9,1">
+               <item>
+                <widget class="QLabel" name="mid_label">
+                 <property name="minimumSize">
+                  <size>
+                   <width>490</width>
+                   <height>50</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>490</width>
+                   <height>50</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255,20,147);</string>
+                 </property>
+                 <property name="text">
+                  <string>当前未选择midi，请选择后点击开始</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="close_pushButton">
+                 <property name="minimumSize">
+                  <size>
+                   <width>40</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>40</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton{
+	background-color: rgba(255, 255, 255, 0.3);
+	image: url(:/icon/static/icon/close.png);
+}
+QPushButton:hover{
+	background-color: rgba(255, 255, 255, 0.6);
+}
+QPushButton:pressed{
+	background-color: rgba(255, 255, 255, 0.1);
+}</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="flat">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="9,1">
+               <item>
+                <widget class="QLabel" name="tip_label">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>60</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>60</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <property name="text">
+                  <string>当模式一无法正常演奏时，请切换模式二，
+反之同理</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_8">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_3">
+               <item>
+                <spacer name="horizontalSpacer_2">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+                <widget class="QRadioButton" name="mode1_radioButton">
+                 <property name="text">
+                  <string>模式1</string>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+                <widget class="QRadioButton" name="mode2_radioButton">
+                 <property name="text">
+                  <string>模式2</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_5">
+               <property name="spacing">
+                <number>10</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="speed_label">
+                 <property name="minimumSize">
+                  <size>
+                   <width>280</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>280</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <property name="text">
+                  <string>演奏速度(倍)</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="buddy">
+                  <cstring>wait_spinBox</cstring>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QDoubleSpinBox" name="speed_doubleSpinBox">
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>100</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QDoubleSpinBox{
+	background-color: rgba(255,255,255,0.3);
+}
+QDoubleSpinBox:up-button 
+{
+    subcontrol-origin:border;
+    subcontrol-position:right;
+	image: url(:/icon/static/icon/add.png);
+	width: 20px;
+    height: 20px;
+	background-color: rgba(255,255,255,0.5);
+}
+
+QDoubleSpinBox:down-button 
+{
+    subcontrol-origin:border;
+    subcontrol-position:left;
+    image: url(:/icon/static/icon/move.png);
+	width: 20px;
+    height: 20px;
+	background-color: rgba(255,255,255,0.5);
+}
+QDoubleSpinBox:up-button:hover{
+	background-color: rgba(255,255,255,0.7);
+}
+QDoubleSpinBox:up-button:pressed{
+	background-color: rgba(255,255,255,0.1);
+}</string>
+                 </property>
+                 <property name="decimals">
+                  <number>1</number>
+                 </property>
+                 <property name="minimum">
+                  <double>0.500000000000000</double>
+                 </property>
+                 <property name="maximum">
+                  <double>5.000000000000000</double>
+                 </property>
+                 <property name="singleStep">
+                  <double>0.100000000000000</double>
+                 </property>
+                 <property name="value">
+                  <double>1.000000000000000</double>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_4">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_4">
+               <property name="spacing">
+                <number>10</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="wait_label">
+                 <property name="minimumSize">
+                  <size>
+                   <width>280</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>280</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <property name="text">
+                  <string>等待间隔(&amp;s)</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="buddy">
+                  <cstring>wait_spinBox</cstring>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="wait_spinBox">
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>100</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QSpinBox{
+	background-color: rgba(255,255,255,0.3);
+}
+QSpinBox:up-button 
+{
+    subcontrol-origin:border;
+    subcontrol-position:right;
+	image: url(:/icon/static/icon/add.png);
+	width: 20px;
+    height: 20px;
+	background-color: rgba(255,255,255,0.5);
+}
+
+QSpinBox:down-button 
+{
+    subcontrol-origin:border;
+    subcontrol-position:left;
+    image: url(:/icon/static/icon/move.png);
+	width: 20px;
+    height: 20px;
+	background-color: rgba(255,255,255,0.5);
+}
+QSpinBox:up-button:hover{
+	background-color: rgba(255,255,255,0.7);
+}
+QSpinBox:up-button:pressed{
+	background-color: rgba(255,255,255,0.1);
+}
+QSpinBox:down-button:hover{
+	background-color: rgba(255,255,255,0.7);
+}
+QSpinBox:down-button:pressed{
+	background-color: rgba(255,255,255,0.1);
+}</string>
+                 </property>
+                 <property name="keyboardTracking">
+                  <bool>true</bool>
+                 </property>
+                 <property name="minimum">
+                  <number>5</number>
+                 </property>
+                 <property name="maximum">
+                  <number>20</number>
+                 </property>
+                 <property name="singleStep">
+                  <number>5</number>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_5">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <spacer name="verticalSpacer">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_6">
+               <property name="spacing">
+                <number>10</number>
+               </property>
+               <property name="leftMargin">
+                <number>5</number>
+               </property>
+               <property name="topMargin">
+                <number>5</number>
+               </property>
+               <property name="rightMargin">
+                <number>5</number>
+               </property>
+               <property name="bottomMargin">
+                <number>5</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="progress_label">
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>35</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>100</width>
+                   <height>35</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <property name="text">
+                  <string>演奏进度</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QProgressBar" name="progressBar">
+                 <property name="styleSheet">
+                  <string notr="true">QProgressBar{
+	border: 2px solid white;
+	background-color: #E0E0E0;
+	min-height: 8px;
+    max-height: 8px;
+	border-radius: 3px;
+}
+QProgressBar::chunk {
+    background-color: #BF3EFF;
+    width: 7px;
+}
+</string>
+                 </property>
+                 <property name="value">
+                  <number>0</number>
+                 </property>
+                 <property name="textVisible">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_9" stretch="1,0,2,0,1">
+               <property name="spacing">
+                <number>9</number>
+               </property>
+               <item>
+                <spacer name="horizontalSpacer_6">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="play_pushButton">
+                 <property name="minimumSize">
+                  <size>
+                   <width>110</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>110</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgba(255, 255, 255, 0.5);
+</string>
+                 </property>
+                 <property name="text">
+                  <string>开始</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_3">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="stop_pushButton">
+                 <property name="minimumSize">
+                  <size>
+                   <width>110</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>110</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgba(255, 255, 255, 0.5);
+</string>
+                 </property>
+                 <property name="text">
+                  <string>停止</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_7">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../qrc/ys_bg.qrc"/>
+ </resources>
+ <connections/>
+</ui>

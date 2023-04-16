@@ -1,0 +1,17 @@
+<RCC>
+  <qresource prefix="bg">
+    <file>cxk2.png</file>
+    <file>cxk.png</file>
+    <file>../static/ys_bg/bnt1.png</file>
+    <file>../static/ys_bg/dan1.png</file>
+    <file>../static/ys_bg/dan2.png</file>
+  </qresource>
+  <qresource prefix="icon">
+    <file>../static/icon/add.png</file>
+    <file>../static/icon/checkbox_ok.png</file>
+    <file>../static/icon/move.png</file>
+    <file>../static/icon/复选框 (1).png</file>
+    <file>../static/icon/复选框 (2).png</file>
+    <file>../static/icon/close.png</file>
+  </qresource>
+</RCC>
